@@ -4,8 +4,7 @@
 #include <unistd.h>
 
 int mainMenu() {
-	system("clear");
-	char command[100];
+	char command[1000];
 	system("clear");
 	printf("Copyright (©) Uri Arev 2021\n");
 	printf("\n");
@@ -23,7 +22,7 @@ int mainMenu() {
 	printf("\n\n");
 	while ( 0 == 0 ) {	
 		printf("Option> ");
-		fgets(command, 100, stdin);
+		fgets(command, 1000, stdin);
 		if ( strcmp(command, "Command Mode\n") == 0 || strcmp(command, "command mode\n") == 0 || strcmp(command, "Command mode\n") == 0 || strcmp(command, "command Mode\n") == 0 || strcmp(command, "1\n") == 0 ) {
 			printf("COMMAND MODE APPLIED\n");
 		} else if ( strcmp(command, "Credits\n") == 0 || strcmp(command, "credits\n") == 0 || strcmp(command, "2\n") == 0 ) {
