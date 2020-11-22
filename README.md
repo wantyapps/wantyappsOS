@@ -4,7 +4,7 @@
 
 ## Installation
 
-- Clone the repository using `git clone [https://github.com/wantyapps/wantyappsOS.git](https://github.com/wantyapps/wantyappsOS.git)`
+- Clone the repository using `git clone `[`https://github.com/wantyapps/wantyappsOS.git`](https://github.com/wantyapps/wantyappsOS.git)
 
 - Change directory to the cloned repository using `cd wantyappsOS`
 
