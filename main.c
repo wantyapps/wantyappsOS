@@ -2,6 +2,31 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include "ui/wantyui.h"
+
+void helpMenu() {
+	printf("HELP\n");
+	printf("==================\n");
+	printf("HELP - show this menu.\n");
+	printf("EXIT - exit Command Mode.\n");
+	printf("CLEAR - clear screen.\n");
+};
+
+int commandMode() {
+	runUI();
+	printf("Enered Command Mode.\n");
+	printf("Enter \"HELP\" to show a quick help.\n");
+	char commandModeCommand[10000];
+	while ( 0 == 0 ) {
+		printf("COMMAND>");
+		fgets(commandModeCommand, 10000, stdin);
+		if ( strcmp(commandModeCommand, "HELP\n") == 0 || strcmp(commandModeCommand, "help\n") == 0 || strcmp(commandModeCommand, "Help\n") == 0 ) {
+			helpMenu();
+		} else if ( strcmp(commandModeCommand, "EXIT\n") == 0 || strcmp(commandModeCommand, "exit\n") == 0 || strcmp(commandModeCommand, "Exit\n") == 0 ) {
+			return 0;
+		};
+	};
+}
 
 int mainMenu() {
 	char command[1000];
@@ -24,7 +49,7 @@ int mainMenu() {
 		printf("Option> ");
 		fgets(command, 1000, stdin);
 		if ( strcmp(command, "Command Mode\n") == 0 || strcmp(command, "command mode\n") == 0 || strcmp(command, "Command mode\n") == 0 || strcmp(command, "command Mode\n") == 0 || strcmp(command, "1\n") == 0 ) {
-			printf("COMMAND MODE APPLIED\n");
+			commandMode();
 		} else if ( strcmp(command, "Credits\n") == 0 || strcmp(command, "credits\n") == 0 || strcmp(command, "2\n") == 0 ) {
 			system("clear");
 			printf("CREDITS\n\n");
