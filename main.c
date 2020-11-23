@@ -59,7 +59,7 @@ int mainMenu() {
 			mainMenu();
 		} else if ( strcmp(command, "Exit\n") == 0 || strcmp(command, "exit\n") == 0 || strcmp(command, "99\n") == 0 ) {
 			exit(0);
-		} else if ( strcmp(command, "UI\n") == 0 || strcmp(command, "Ui\n") == 0 ) {
+		} else if ( strcmp(command, "UI\n") == 0 || strcmp(command, "Ui\n") == 0 || strcmp(command, "3\n") == 0 ) {
 			runUI();
 		} else {
 			printf("Please use a valid option.\n");
