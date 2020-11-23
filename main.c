@@ -13,7 +13,6 @@ void helpMenu() {
 };
 
 int commandMode() {
-	runUI();
 	printf("Enered Command Mode.\n");
 	printf("Enter \"HELP\" to show a quick help.\n");
 	char commandModeCommand[10000];
@@ -42,6 +41,7 @@ int mainMenu() {
 	printf("*********************************\n");
 	printf("* 1. Command Mode               *\n");
 	printf("* 2. Credits                    *\n");
+	printf("* 3. UI                         *\n");
 	printf("* 99. \033[91mExit\033[0m                      *\n");
 	printf("*********************************\n");
 	printf("\n\n");
@@ -59,6 +59,8 @@ int mainMenu() {
 			mainMenu();
 		} else if ( strcmp(command, "Exit\n") == 0 || strcmp(command, "exit\n") == 0 || strcmp(command, "99\n") == 0 ) {
 			exit(0);
+		} else if ( strcmp(command, "UI\n") == 0 || strcmp(command, "Ui\n") == 0 ) {
+			runUI();
 		} else {
 			printf("Please use a valid option.\n");
 		};
